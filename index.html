@@ -10,7 +10,7 @@
 <style>
   :root{
     --paper:#F7F5EF;        /* warm beige base */
-    --cream:#FBF7EE;        /* lighter beige */
+    --cream:#EFEAE0;        /* warm greige step — alternating sections */
     --white:#FFFFFF;
     --blue:#2F6FE4;         /* bright, friendly primary */
     --blue-deep:#163763;    /* navy — replaces black for text */
@@ -73,7 +73,7 @@
   .note{position:absolute;width:248px;padding:22px 22px 20px;border-radius:14px;
     box-shadow:0 14px 30px -14px rgba(22,55,99,.4);
     opacity:0;transform:translateY(26px) rotate(var(--rot));
-    animation:pin .7s cubic-bezier(.2,.8,.25,1) forwards;animation-delay:var(--d)}
+    animation:pin .7s cubic-bezier(.2,.8,.25,1) forwards;animation-delay:calc(var(--d) + .7s)}
   .note::before{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%);
     width:16px;height:16px;border-radius:50%;background:var(--blue);
     box-shadow:inset 0 -2px 0 rgba(255,255,255,.3), 0 3px 5px -2px rgba(0,0,0,.35)}
@@ -129,7 +129,7 @@
   .nolist li.yes::before{content:"✓";color:var(--n-leaf)}
 
   /* ---------- SAFETY + LAUNCH ---------- */
-  section.trust{padding:96px 0}
+  section.trust{padding:96px 0;background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .trust-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
   .card{border:1px solid var(--line);border-radius:20px;padding:38px;background:var(--white)}
   .card.safe{background:#EAF1FC;border-color:#D4E2F7}
@@ -185,12 +185,12 @@
       <span class="eyebrow">En app, der får dig væk fra skærmen</span>
       <h1>Hvem er <em>med?</em></h1>
       <p class="slogan">En fremmed er en ven,<br>du ikke har mødt endnu.</p>
-      <p class="lead">Slå en aktivitet op, lad folk sige ja, og mødes i virkeligheden. Ikke på en skærm.</p>
+      <p class="lead">Slå en aktivitet op, lad folk sige ja, og mødes i virkeligheden. Ikke på skærmen.</p>
       <div class="hero-actions">
         <button class="btn btn-primary" onclick="document.getElementById('signup').scrollIntoView()">Få tidlig adgang</button>
         <button class="btn btn-ghost" onclick="document.getElementById('how').scrollIntoView()">Sådan virker det</button>
       </div>
-      <p class="hero-note">Vi starter i Storkøbenhavn. Med fra hele landet.</p>
+      <p class="hero-note">Vi åbner først i Storkøbenhavn — flere byer følger.</p>
     </div>
 
     <div class="board" aria-hidden="true">
@@ -206,7 +206,7 @@
       </div>
       <div class="note n3">
         <div class="when">I aften</div>
-        <div class="what">Koncert — hvem med?</div>
+        <div class="what">Frisk på koncert?</div>
         <div class="meta"><span>2 pladser</span><button class="join" data-count="1">1 er med</button></div>
       </div>
       <div class="note n4">
@@ -233,7 +233,7 @@
 
 <section class="band">
   <div class="wrap">
-    <p class="big">De bedste øjeblikke sker <b>ikke</b> på en skærm.</p>
+    <p class="big">De bedste øjeblikke sker <b>ikke</b> på skærmen.</p>
     <p class="sub">Hej er bygget til at blive lagt fra dig — så du kan være sammen med rigtige mennesker.</p>
   </div>
 </section>
@@ -259,6 +259,41 @@
         <div class="num">3</div>
         <h3>Du vælger — og I mødes</h3>
         <p>Sig ja til dem, du vil med. Detaljerne deles, og resten sker ude i virkeligheden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:92px 0;text-align:center">
+  <div class="wrap">
+    <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(30px,4.4vw,50px);letter-spacing:-.025em;color:var(--blue-deep);margin-bottom:14px">Et kort — ikke et feed</h2>
+    <p style="font-size:19px;color:var(--blue-mut);max-width:42ch;margin:0 auto 44px">Se hvem der er frisk i nærheden lige nu. Vælg en aktivitet, sig ja — og mødes.</p>
+    <div style="display:inline-block;width:300px;background:#fff;border:1px solid var(--line);border-radius:32px;overflow:hidden;box-shadow:0 26px 54px -26px rgba(22,55,99,.45);text-align:left;vertical-align:top">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px">
+        <span style="font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--blue-deep)">Hej<span style="color:var(--coral)">.</span></span>
+        <span style="font-family:var(--body);font-size:12px;font-weight:600;color:var(--blue);border:1px solid rgba(47,111,228,.4);border-radius:999px;padding:5px 11px">Filtre</span>
+      </div>
+      <div style="position:relative;height:330px;background:#EAF0E6">
+        <svg viewBox="0 0 300 330" width="300" height="330" style="display:block" aria-hidden="true">
+          <rect width="300" height="330" fill="#EAF0E6"/>
+          <path d="M0 215 Q95 200 185 240 T300 255 L300 330 L0 330 Z" fill="#BBDDF7"/>
+          <rect x="36" y="44" width="84" height="66" rx="10" fill="#C9E8B0"/>
+          <g stroke="#F7F5EF" stroke-width="9" stroke-linecap="round">
+            <line x1="-5" y1="125" x2="305" y2="155"/><line x1="140" y1="-5" x2="100" y2="335"/><line x1="225" y1="-5" x2="250" y2="225"/>
+          </g>
+        </svg>
+        <div style="position:absolute;left:96px;top:128px;transform:translate(-50%,-50%);width:120px;height:120px;border-radius:50%;background:rgba(47,111,228,.15);border:1.5px solid rgba(47,111,228,.55)"></div>
+        <svg style="position:absolute;left:96px;top:128px;transform:translate(-50%,-100%)" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" fill="#2F6FE4"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>
+        <div style="position:absolute;left:214px;top:198px;transform:translate(-50%,-50%);width:92px;height:92px;border-radius:50%;background:rgba(255,111,91,.15);border:1.5px solid rgba(255,111,91,.6)"></div>
+        <svg style="position:absolute;left:214px;top:198px;transform:translate(-50%,-100%)" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" fill="#FF6F5B"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>
+        <div style="position:absolute;left:12px;right:12px;bottom:12px;background:#fff;border-radius:13px;padding:11px 13px;border:1px solid var(--line)">
+          <div style="font-family:var(--body);font-size:12px;font-weight:600;color:var(--blue)">I dag 16:00 · Lyngby-området</div>
+          <div style="font-family:var(--display);font-size:16px;font-weight:700;color:var(--blue-deep);margin-top:1px">Frisk på en kaffe?</div>
+          <div style="font-family:var(--body);font-size:11px;color:var(--blue-mut);margin-top:4px">4 pladser · 20–30 år</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-around;padding:12px 0 14px;border-top:1px solid var(--line);font-family:var(--body);font-size:12px;font-weight:600;color:var(--blue-mut)">
+        <span style="color:var(--blue)">Kort</span><span>Opret</span><span>Beskeder</span><span>Profil</span>
       </div>
     </div>
   </div>
