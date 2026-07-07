@@ -27,7 +27,7 @@ Instagram has no cover. The og-image (`../og-image.png`) doubles as a link-share
 **Bio** (under 150 chars):
 
 ```
-Nye venskaber begynder med et hej 👋
+Nye venskaber begynder med Hej 👋
 Foreslå en aktivitet. Mød andre — i virkeligheden.
 Åbner først i Storkøbenhavn 📍
 Skriv dig op ⬇️
@@ -59,7 +59,7 @@ scroll. Vi åbner først i Storkøbenhavn.
 **Tagline** (max 120 chars):
 
 ```
-Appen, der får dig væk fra skærmen. Nye venskaber begynder med et hej. Vi åbner først i Storkøbenhavn.
+Appen, der får dig væk fra skærmen. Nye venskaber begynder med Hej. Vi åbner først i Storkøbenhavn.
 ```
 
 **About:**
