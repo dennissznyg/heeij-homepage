@@ -33,7 +33,7 @@ Foreslå en aktivitet. Mød andre — i virkeligheden.
 ```
 
 **Website field:** leave EMPTY (no homepage reference).
-**Profile picture:** social/profile-1080.png (Heeij wordmark on navy — circle-safe). Live at https://dennissznyg.github.io/hej-homepage/social/profile-1080.png
+**Profile picture:** social/profile-1080.png (Heeij wordmark on navy — circle-safe). Live at https://dennissznyg.github.io/heeij-homepage/social/profile-1080.png
 **Note:** IG profile picture + bio can ONLY be set in the Instagram app — Meta's API does not expose profile editing (only content publishing).
 
 ---
