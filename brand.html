@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hej. — Designguide</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F5EF; --cream:#EFEAE0; --white:#FFFFFF;
+    --blue:#2F6FE4; --blue-deep:#163763; --blue-mut:#5E7396;
+    --amber:#FFC24B; --coral:#FF6F5B; --line:#E4DCCB;
+    --n-yellow:#FFE08A; --n-sky:#BBDDF7; --n-coral:#FFC7BC; --n-leaf:#C9E8B0; --n-lav:#DCC9F4;
+    --display:"Bricolage Grotesque",system-ui,sans-serif;
+    --body:"Hanken Grotesk",system-ui,sans-serif;
+    --hand:"Caveat",cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--blue-deep);font-family:var(--body);
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:56px 28px 80px}
+  header{margin-bottom:56px}
+  .wordmark{font-family:var(--display);font-weight:800;font-size:88px;letter-spacing:-.02em;line-height:1}
+  .wordmark span{color:var(--coral)}
+  .slogan{font-family:var(--hand);font-weight:700;font-size:34px;color:var(--coral);margin-top:10px}
+  .meta{font-size:15px;font-weight:600;color:var(--blue-mut);margin-top:14px}
+  h2{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.02em;margin:64px 0 8px}
+  .lede{color:var(--blue-mut);max-width:620px;margin-bottom:24px}
+  h3{font-family:var(--display);font-weight:700;font-size:20px;margin:28px 0 10px}
+  ul{padding-left:22px}
+  li{margin-bottom:6px}
+  .rule{border:none;border-top:1px solid var(--line);margin-top:56px}
+
+  .logo-panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .panel{border-radius:16px;padding:44px 24px;text-align:center;border:1px solid var(--line)}
+  .panel .wm{font-family:var(--display);font-weight:800;font-size:56px;letter-spacing:-.02em;line-height:1}
+  .panel.on-paper{background:var(--white)}
+  .panel.on-paper .wm{color:var(--blue-deep)}
+  .panel.on-navy{background:var(--blue-deep);border-color:var(--blue-deep)}
+  .panel.on-navy .wm{color:#fff}
+  .panel .wm span{color:var(--coral)}
+  .panel .cap{font-size:13px;font-weight:600;margin-top:16px;color:var(--blue-mut)}
+  .panel.on-navy .cap{color:#B9C6DA}
+  .panel.tile img{width:96px;height:96px;display:block;margin:0 auto}
+
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:18px}
+  .sw{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--white)}
+  .sw .chip{height:84px}
+  .sw .info{padding:12px 14px 13px}
+  .sw .nm{font-family:var(--display);font-weight:700;font-size:16px}
+  .sw .hx{font-size:13px;font-weight:600;color:var(--blue-mut);letter-spacing:.03em}
+  .sw .use{font-size:13.5px;color:var(--blue-mut);margin-top:5px;line-height:1.45}
+
+  .type-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-top:16px}
+  .type-card .spec{margin-bottom:8px}
+  .type-card .label{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+  .type-card .about{font-size:14.5px;color:var(--blue-mut);margin-top:8px}
+
+  .motif-row{display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;margin-top:22px}
+  .board{position:relative;width:340px;height:230px;background:var(--cream);border-radius:16px;flex:0 0 auto}
+  .note{position:absolute;width:200px;padding:18px 18px 16px;border-radius:13px;
+    box-shadow:0 14px 30px -14px rgba(22,55,99,.4)}
+  .note::before{content:"";position:absolute;top:-8px;left:50%;transform:translateX(-50%);
+    width:15px;height:15px;border-radius:50%;background:var(--blue);
+    box-shadow:inset 0 -2px 0 rgba(255,255,255,.3),0 3px 5px -2px rgba(0,0,0,.35)}
+  .note .when{font-family:var(--hand);font-weight:700;font-size:19px;color:var(--blue);margin-bottom:3px}
+  .note .what{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.15;letter-spacing:-.01em}
+  .note.y{background:var(--n-yellow);transform:rotate(-5deg);top:34px;left:26px}
+  .note.s{background:var(--n-sky);transform:rotate(4deg);top:104px;left:126px}
+  .motif-text{flex:1 1 300px}
+
+  footer{margin-top:64px;font-size:14.5px;color:var(--blue-mut)}
+  footer strong{color:var(--blue-deep)}
+  a{color:var(--blue)}
+  @media print{
+    body{font-size:13px}
+    .wrap{padding:24px}
+    h2{margin-top:34px;font-size:26px}
+    .board{box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="wordmark">Hej<span>.</span></div>
+  <p class="slogan">Nye venskaber begynder med Hej.</p>
+  <p class="meta">Designguide · juli 2026 · kanonisk version vedligeholdes i Notion ("Hej — Business" → Brand)</p>
+</header>
+
+<h2>Logo &amp; mærke</h2>
+<p class="lede">Ordet er logoet: <em>Hej</em> sat i Bricolage Grotesque ExtraBold (800) med −0,02 em sporing
+og et punktum i koral. Punktummet er den visuelle signatur — det gør hilsnen til et udsagn og er
+<strong>altid koral</strong>, uanset sammenhæng.</p>
+<div class="logo-panels">
+  <div class="panel on-paper"><div class="wm">Hej<span>.</span></div><div class="cap">Navy på papir/hvid</div></div>
+  <div class="panel on-navy"><div class="wm">Hej<span>.</span></div><div class="cap">Hvid på navy</div></div>
+  <div class="panel on-paper tile"><img src="favicon.svg" alt="Hej.-flisen: wordmark på navy kvadrat med afrundede hjørner"><div class="cap">Flisen — avatar, favicon, app-ikon</div></div>
+</div>
+<h3>Regler</h3>
+<ul>
+  <li>Kun de to farvekombinationer ovenfor. Punktummet skifter aldrig farve.</li>
+  <li>Friareal: mindst højden af det lille "e" til alle sider.</li>
+  <li>Under ca. 24 px højde bruges flisen i stedet for det løse wordmark (teksten fylder ~80 % af flisens bredde).</li>
+  <li>Wordmarket må ikke sættes i anden skrift, strækkes, konturocheres eller få effekter.</li>
+  <li>Det tidligere "H."-monogram er udgået og må ikke bruges.</li>
+</ul>
+
+<hr class="rule">
+
+<h2>Farver</h2>
+<p class="lede">Navy i stedet for sort. Papir i stedet for hvidt. Koral er bevidst knap — ét koral-øjeblik pr. flade.</p>
+<div class="swatches">
+  <div class="sw"><div class="chip" style="background:#F7F5EF;border-bottom:1px solid var(--line)"></div><div class="info"><div class="nm">Papir</div><div class="hx">#F7F5EF</div><div class="use">Basisbaggrund overalt — aldrig rene hvide flader</div></div></div>
+  <div class="sw"><div class="chip" style="background:#EFEAE0"></div><div class="info"><div class="nm">Creme</div><div class="hx">#EFEAE0</div><div class="use">Skiftende sektionsbaggrund</div></div></div>
+  <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid var(--line)"></div><div class="info"><div class="nm">Hvid</div><div class="hx">#FFFFFF</div><div class="use">Kort og flader oven på papir</div></div></div>
+  <div class="sw"><div class="chip" style="background:#2F6FE4"></div><div class="info"><div class="nm">Blå</div><div class="hx">#2F6FE4</div><div class="use">Primær accent — links, fremhævninger, nåle</div></div></div>
+  <div class="sw"><div class="chip" style="background:#163763"></div><div class="info"><div class="nm">Navy</div><div class="hx">#163763</div><div class="use">Al tekst og mørke flader — erstatter sort</div></div></div>
+  <div class="sw"><div class="chip" style="background:#5E7396"></div><div class="info"><div class="nm">Dæmpet blå</div><div class="hx">#5E7396</div><div class="use">Sekundær tekst</div></div></div>
+  <div class="sw"><div class="chip" style="background:#FF6F5B"></div><div class="info"><div class="nm">Koral</div><div class="hx">#FF6F5B</div><div class="use">Poppet: slogan, punktum, vigtigste CTA — brug sparsomt</div></div></div>
+  <div class="sw"><div class="chip" style="background:#FFC24B"></div><div class="info"><div class="nm">Rav</div><div class="hx">#FFC24B</div><div class="use">Varm sekundær accent</div></div></div>
+  <div class="sw"><div class="chip" style="background:#E4DCCB"></div><div class="info"><div class="nm">Streg</div><div class="hx">#E4DCCB</div><div class="use">Hårstreger og kanter</div></div></div>
+</div>
+<h3>Notekort-pasteller</h3>
+<p class="lede">Bruges kun som baggrund på notekortene — aldrig til knapper eller UI.</p>
+<div class="swatches">
+  <div class="sw"><div class="chip" style="background:#FFE08A"></div><div class="info"><div class="nm">Gul</div><div class="hx">#FFE08A</div></div></div>
+  <div class="sw"><div class="chip" style="background:#BBDDF7"></div><div class="info"><div class="nm">Himmel</div><div class="hx">#BBDDF7</div></div></div>
+  <div class="sw"><div class="chip" style="background:#FFC7BC"></div><div class="info"><div class="nm">Koral-tone</div><div class="hx">#FFC7BC</div></div></div>
+  <div class="sw"><div class="chip" style="background:#C9E8B0"></div><div class="info"><div class="nm">Blad</div><div class="hx">#C9E8B0</div></div></div>
+  <div class="sw"><div class="chip" style="background:#DCC9F4"></div><div class="info"><div class="nm">Lavendel</div><div class="hx">#DCC9F4</div></div></div>
+</div>
+
+<hr class="rule">
+
+<h2>Typografi</h2>
+<p class="lede">Tre skrifter, tre roller. Alle er Google Fonts under OFL-licens — gratis til kommerciel brug.</p>
+<div class="type-card">
+  <div class="label">Display — Bricolage Grotesque</div>
+  <div class="spec" style="font-family:var(--display);font-weight:800;font-size:38px;letter-spacing:-.02em;line-height:1.15;margin-top:10px">Hvem vil med?</div>
+  <div class="about">Overskrifter, wordmark og notekortenes indholdslinje. Vægte 600 / 700 / 800, stram sporing (−0,01 til −0,03 em). Fallback: system-ui, sans-serif.</div>
+</div>
+<div class="type-card">
+  <div class="label">Brødtekst / UI — Hanken Grotesk</div>
+  <div class="spec" style="font-size:18px;margin-top:10px">Foreslå en aktivitet. Mød andre, der også er friske — i virkeligheden. Vægte 400–700 til afsnit, knapper, formularer og metadata.</div>
+  <div class="about">Fallback: system-ui, sans-serif.</div>
+</div>
+<div class="type-card">
+  <div class="label">Håndskrift — Caveat</div>
+  <div class="spec" style="font-family:var(--hand);font-weight:700;font-size:32px;color:var(--coral);margin-top:8px">Nye venskaber begynder med Hej.</div>
+  <div class="about">Kun til sloganet og korte "menneskelige" noter (fx tidslinjen på notekort). Vægte 500–700, altid koral eller blå. Aldrig brødtekst, aldrig mere end én linje. Fallback: cursive.</div>
+</div>
+
+<hr class="rule">
+
+<h2>Grafiske motiver</h2>
+<div class="motif-row">
+  <div class="board" role="img" aria-label="To notekort på creme baggrund: et gult og et himmelblåt, let roterede, med blå nål">
+    <div class="note y"><div class="when">I dag kl. 16</div><div class="what">Frisk på en kaffe?</div></div>
+    <div class="note s"><div class="when">På søndag</div><div class="what">En tur i Zoo</div></div>
+  </div>
+  <div class="motif-text">
+    <h3 style="margin-top:0">Notekort ("opslag")</h3>
+    <ul>
+      <li>Pastel-rektangler med radius ~13–16 px, roteret ±4–6°.</li>
+      <li>Blå nåleprik centreret på overkanten; blød navy skygge (rgba(22,55,99,.4)).</li>
+      <li>To linjer: "hvornår" i Caveat (blå) og "hvad" i Bricolage (navy).</li>
+      <li>Indholdet er konkrete, danske aktiviteter — de står for virkelige møder.</li>
+    </ul>
+    <h3>Koral-prikken</h3>
+    <p>Punktummet i wordmark og slogan — brandets mindste enhed.</p>
+    <h3>Papir-baggrunden</h3>
+    <p>Varm, rolig, analog — "anti-feed". Intet rent hvidt, intet rent sort, nogen steder.</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<footer>
+  <p><strong>Filer</strong> (i <code>hej-homepage</code>-repoet): favicon.svg · favicon-16/32/512.png · favicon.ico ·
+  apple-touch-icon.png · og-image.png/jpg · social/profile-1080.png · social/facebook-cover-1640x624.png ·
+  social/linkedin-cover-2256x382.png</p>
+  <p style="margin-top:10px">Denne side er genereret fra den kanoniske guide i Notion ("Hej — Business" → Brand).
+  Ved uoverensstemmelse vinder Notion. · © Hej</p>
+</footer>
+
+</div>
+</body>
+</html>
