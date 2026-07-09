@@ -8,16 +8,20 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<!-- Language router. Each language lives in its own folder: /dk/ (Danish). Add more below and in the script/hreflang. -->
+<!-- Language router. Each language lives in its own folder: /dk/ (Danish), /en/ (English). To add a language: create the folder, then add it to `supported` + `map` below and to the hreflang links. -->
 <link rel="alternate" hreflang="da" href="https://dennissznyg.github.io/heeij-homepage/dk/">
+<link rel="alternate" hreflang="en" href="https://dennissznyg.github.io/heeij-homepage/en/">
 <link rel="alternate" hreflang="x-default" href="https://dennissznyg.github.io/heeij-homepage/dk/">
-<!-- When English is ready: <link rel="alternate" hreflang="en" href="https://dennissznyg.github.io/heeij-homepage/en/"> -->
 <script>
   (function () {
-    // Folders that actually exist, in priority order. Add 'en' here when /en/ is built.
-    var supported = ['dk'];
-    var fallback = 'dk';
-    // Map 2-letter browser language codes to our folder names.
+    var supported = ['dk', 'en'];   // folders that exist
+    var fallback = 'dk';            // Danish stays the default
+    // 1. Remembered choice (set on every content page; the language toggle switches it).
+    try {
+      var saved = localStorage.getItem('heeij_lang');
+      if (saved && supported.indexOf(saved) !== -1) { location.replace(saved + '/'); return; }
+    } catch (e) {}
+    // 2. Browser preference (Accept-Language). Map 2-letter codes to folder names.
     var map = { da: 'dk', en: 'en' };
     var langs = navigator.languages || [navigator.language || 'da'];
     var target = fallback;
@@ -25,6 +29,7 @@
       var folder = map[(langs[i] || '').slice(0, 2).toLowerCase()];
       if (folder && supported.indexOf(folder) !== -1) { target = folder; break; }
     }
+    // 3. Fallback Danish.
     location.replace(target + '/');
   })();
 </script>
@@ -36,6 +41,6 @@
 </style>
 </head>
 <body>
-<p>Viderestiller … · <a href="dk/">Fortsæt til Heeij</a></p>
+<p>Redirecting … · <a href="dk/">Dansk</a> · <a href="en/">English</a></p>
 </body>
 </html>

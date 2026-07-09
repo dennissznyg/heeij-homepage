@@ -56,30 +56,37 @@ scroll. Vi åbner først i Storkøbenhavn.
 
 ## LinkedIn (linkedin.com/company/heeijapp)
 
+**Language: ENGLISH** (decided 2026-07-09). LinkedIn's audience is founders/partners/
+recruiting + international, and it aligns with the English-first strategy. This is the
+only channel in English so far — IG + FB stay Danish. Live copy below is what's on the page.
+
 **Company name:** Heeij
-**Tagline** (max 120 chars):
+**Tagline** (max 120 chars) — LIVE:
 
 ```
-Appen, der får dig væk fra skærmen. Nye venskaber begynder med Heeij. Vi åbner først i Storkøbenhavn.
+The app that gets you off your screen. New friendships begin with Heeij. Launching first in Greater Copenhagen.
 ```
 
-**About:**
+**About** — LIVE (no signup CTA, per guardrail):
 
 ```
-Heeij er en app med ét formål: at få folk til at mødes i virkeligheden.
+Heeij is an app with a single purpose: to get people meeting in real life.
 
-Du foreslår en aktivitet — en kaffe, en løbetur, en koncert. Andre i nærheden
-siger til, du godkender, og så mødes I. Ingen likes, ingen følgere, ingen
-endeløs scroll. Succes for os er, at du lukker appen og går ud ad døren.
+You suggest an activity — a coffee, a run, a concert. Others nearby opt in, you
+choose who joins, and you meet up. In real life. No likes, no followers, no
+endless scroll. Success, for us, is you closing the app and stepping out the door.
 
-Tryghed er kernen: værten godkender hver deltager, før detaljer deles, og
-aktiviteter foregår i det offentlige rum.
+Safety is at the core: the host approves each participant before any details are
+shared, and activities take place in public spaces.
 
-Vi åbner først i Storkøbenhavn. Skriv dig op og få besked, når vi går i luften.
+We're launching first in Greater Copenhagen.
 ```
 
-**Industry:** Software Development · **Size:** 1 medarbejder · **Type:** Privatejet
-**Website:** https://dennissznyg.github.io/heeij-homepage/
+**Industry:** Software Development · **Size:** 0-1 employees · **Type:** Privately Held
+**Website:** none — "My organization doesn't have a website" is checked (guardrail: no link
+while the legal P0 stands; heeij.com not owned yet). Revisit when the domain + P0 resolve.
+**Cover:** English version `linkedin-cover-2256x382.png` (coral "New friendships begin with
+Heeij." + navy "Close the app. Meet the world. · Launching first in Greater Copenhagen").
 
 ---
 
