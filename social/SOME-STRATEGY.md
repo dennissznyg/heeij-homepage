@@ -61,6 +61,11 @@ via SoMe endnu. (Ophæves når den juridiske P0 er løst.)
 `#VilDuMed` er brandets invitations-signatur som hashtag. **Ikke unik** (almindelig frase → ingen reach),
 men bevidst med: den **gør appens idé øjeblikkeligt tydelig** og opfordrer til svar. Bruges regelmæssigt,
 især under aktivitets-opslag.
+
+**To invitations-linjer, én regel:** `Vil du med?` (2. person, direkte) og `Hvem vil med?` (3. person, værtens
+stemme — hero-overskriften) er begge gyldige, som tekst og som hashtag, valgt efter indhold.
+**Men brug kun ÉN pr. post** (tekst og/eller hashtag) — aldrig begge, ellers bliver det kluntet.
+`#VilDuMed` er default; `#HvemVilMed` kan bruges i stedet på værts-/broadcast-vinklet indhold.
 `#mødtespåheeij` = "de mødtes på Heeij" — vores ejede UGC-tag. Der findes intet stærkt dansk
 "find-venner-i-KBH"-fællesskab (valideret: tyndt/forurenet), så vi **bygger vores eget** som svaret på det hul.
 Slogan-tags (#MødIVirkeligheden o.l.) hører også her: ren stemme, **max 1**, giver ingen reach.
